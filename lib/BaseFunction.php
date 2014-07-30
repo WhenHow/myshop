@@ -16,5 +16,8 @@ function __autoload($class)
     }elseif(file_exists(LIB_CLASS_PATH.'/'.$ClassFileName))
     {
         require_once(LIB_CLASS_PATH.'/'.$ClassFileName);
+    }elseif(file_exists(SITE_ROOT.'/engine/'.$ClassFileName))
+    {
+        require_once(SITE_ROOT.'/engine/'.$ClassFileName);
     }
 }

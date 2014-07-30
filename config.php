@@ -7,6 +7,7 @@
  */
 
 define('HTTP_SERVER','http://192.168.10.4/myshop/');
+define('SITE_ROOT','D:\lamp\apache\htdocs\myshop');
 define('LIB_PATH','D:\lamp\apache\htdocs\myshop/lib');
 define('LIB_CLASS_PATH','D:\lamp\apache\htdocs\myshop/lib/class');
 

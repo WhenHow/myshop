@@ -6,7 +6,7 @@
  * Time: 上午11:52
  */
 
-class product {
+class CatalogProductModel {
     public function addProduct($ProductInfo)
     {
 
