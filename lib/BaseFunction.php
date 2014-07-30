@@ -8,10 +8,10 @@
 
 function __autoload($class)
 {
-    $ClassFileName = '/'.$class.'class.php';
+    $ClassFileName = $class.'.class.php';
 
-    if(file_exists(LIB_PATH.'/DataBase/'.$ClassFileName))
+    if(file_exists(LIB_CLASS_PATH.'/DataBase/'.$ClassFileName))
     {
-        require_once(LIB_PATH.'/DataBase/'.$ClassFileName);
+        require_once(LIB_CLASS_PATH.'/DataBase/'.$ClassFileName);
     }
 }

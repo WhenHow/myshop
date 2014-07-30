@@ -13,7 +13,8 @@ class DBMysqli {
         $this->link = new mysqli($HostName,$UserName,$password,$database);
         if(mysqli_connect_errno())
         {
-            throw new Exception('cant connect database'.'('.mysqli_connect_errno().')'.mysqli_connect_error());
+            throw new ErrorException('cant connect database'.'('.mysqli_connect_errno().')'.mysqli_connect_error());
+            exit();
         }
 
         $this->link->set_charset('utf8');
@@ -24,7 +25,7 @@ class DBMysqli {
     {
         $query = $this->link->query($sql);
         if($this->link->errno){
-            throw new Exception('a query error occur'.'('.$this->link->errno.')'.'on sql '.$sql);
+            throw new ErrorException('a query error occur'.'('.$this->link->errno.')'.'on sql '.$sql);
             exit();
         }else
         {
@@ -44,7 +45,6 @@ class DBMysqli {
                 $query->close();
 
                 unset($data);
-
                 return $ret;
             }else
             {
@@ -81,6 +81,7 @@ class DBMysqli {
     public function __destruct()
     {
         $this->link->close();
+        echo('close');
     }
 
     public function getAffectedRows()
