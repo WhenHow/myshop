@@ -81,7 +81,6 @@ class DBMysqli {
     public function __destruct()
     {
         $this->link->close();
-        echo('close');
     }
 
     public function getAffectedRows()

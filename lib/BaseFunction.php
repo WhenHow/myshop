@@ -13,5 +13,8 @@ function __autoload($class)
     if(file_exists(LIB_CLASS_PATH.'/DataBase/'.$ClassFileName))
     {
         require_once(LIB_CLASS_PATH.'/DataBase/'.$ClassFileName);
+    }elseif(file_exists(LIB_CLASS_PATH.'/'.$ClassFileName))
+    {
+        require_once(LIB_CLASS_PATH.'/'.$ClassFileName);
     }
 }

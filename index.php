@@ -7,5 +7,5 @@
  */
 require_once('config.php');
 require_once(LIB_PATH.'/BaseFunction.php');
-$hehe = new DBMysqli(DB_HOSTNAME,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+$hehe = new DB('Mysqli',DB_HOSTNAME,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 $hehe->query('select * from oc_setting');
