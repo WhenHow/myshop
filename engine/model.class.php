@@ -18,7 +18,7 @@ class model {
 
     public function set($key,$value)
     {
-        return $this->registry->set($key,$value);
+        $this->registry->set($key,$value);
     }
 
     public function has($key)

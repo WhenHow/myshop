@@ -6,7 +6,7 @@
  * Time: 上午11:52
  */
 
-class CatalogProductModel {
+class CatalogProductModel extends model{
     public function addProduct($ProductInfo)
     {
 
