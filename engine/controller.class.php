@@ -9,14 +9,15 @@
 class controller {
 
     protected $registry;
+    public $hehe = 'wocao1';
     public function __construct()
     {
-        $this->$registry = registry::getInstance();
+        $this->registry = registry::getInstance();
     }
 
     public function __get($key)
     {
-        $this->registry->get($key);
+        return $this->registry->get($key);
     }
 
     public function __set($key,$value)
