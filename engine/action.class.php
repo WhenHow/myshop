@@ -7,5 +7,14 @@
  */
 
 class action {
+    protected $file;
+    protected $class;
+    protected $method;
+    protected $args = array();
+
+    public function __construct($route,$args = array())
+    {
+
+    }
 
 } 

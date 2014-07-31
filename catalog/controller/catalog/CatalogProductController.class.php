@@ -6,6 +6,6 @@
  * Time: 下午6:49
  */
 
-class CatalogProductController {
+class CatalogProductController extends controller{
 
 } 
